@@ -1,0 +1,16 @@
+# Source PowerPoint files — exceed GitHub's 100 MB limit, kept locally only
+assets/ppts/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Logs & temp
+*.log
+.tmp/
+tmp/
+
+# Node (in case any tooling is added later)
+node_modules/
