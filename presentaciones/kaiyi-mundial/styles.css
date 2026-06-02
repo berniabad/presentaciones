@@ -113,6 +113,10 @@ a { color: inherit; text-decoration: none; }
 .lead .green, p .green { color: var(--green); font-weight: 500; }
 .body-p { font-size: 16px; line-height: 1.65; color: var(--t-2); margin-top: 16px; }
 .note { font-size: 12.5px; color: var(--t-3); }
+.ig-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 20px; padding: 9px 18px 9px 9px; border: 1px solid var(--border-2); border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--t-1); transition: border-color .3s, transform .3s var(--ease); }
+.ig-link:hover { border-color: var(--border-green); transform: translateY(-2px); }
+.ig-link img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.ig-link .arr { color: var(--green); }
 /* Spanish translation, shown below with a clear secondary hierarchy */
 .es {
   display: block;

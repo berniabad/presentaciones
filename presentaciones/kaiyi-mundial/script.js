@@ -41,8 +41,8 @@
 
   /* ---------- LANGUAGE TOGGLE (EN / ES) ---------- */
   const NAV = {
-    en: { top: '', context: 'Context', argentina: 'Argentina', strategy: 'The Play', ideas: '5 Ideas', cta: "Let's talk" },
-    es: { top: '', context: 'Contexto', argentina: 'Argentina', strategy: 'La Jugada', ideas: '5 Ideas', cta: 'Hablemos' },
+    en: { top: '', context: 'Context', argentina: 'Argentina', strategy: 'The Play', ideas: '3 Ideas', cta: "Let's talk" },
+    es: { top: '', context: 'Contexto', argentina: 'Argentina', strategy: 'La Jugada', ideas: '3 Ideas', cta: 'Hablemos' },
   };
   const deckEn = document.getElementById('deck-en');
   const deckEs = document.getElementById('deck-es');
