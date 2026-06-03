@@ -65,7 +65,9 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* clip (no hidden): evita que el body se vuelva scroll-container, lo que
+     rompe el backdrop-filter del nav fixed cuando se publica en gloaming-os */
+  overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -170,6 +172,7 @@ a { color: inherit; text-decoration: none; }
   background: rgba(0,0,0,.55);
   backdrop-filter: saturate(160%) blur(18px);
   -webkit-backdrop-filter: saturate(160%) blur(18px);
+  will-change: backdrop-filter;
   border-bottom: 1px solid var(--border);
   transition: background .3s var(--ease), border-color .3s var(--ease);
 }
