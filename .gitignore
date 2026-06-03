@@ -6,6 +6,9 @@ assets/copa-marea/_media/
 assets/copa-marea/*.pptx
 assets/copa-marea/*.pdf
 
+# Belada — imágenes intermedias de extracción del PDF (no versionar, ~154MB)
+presentaciones/belada-padel-presentacion/assets/extracted-pdf/
+
 # OS / editor junk
 .DS_Store
 Thumbs.db

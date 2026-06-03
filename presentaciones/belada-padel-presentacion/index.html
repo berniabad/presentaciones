@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belada de Pádel España 2026 · Propuesta Gloaming</title>
+  <meta name="description" content="Propuesta comercial para Belada de Pádel España 2026. Fernando Belasteguín y creadores de contenido.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Animación exclusiva para el radar del mapa */
+    @keyframes pingMap {
+      0% { box-shadow: 0 0 0 0 rgba(214, 255, 20, 0.8); }
+      70% { box-shadow: 0 0 0 35px rgba(214, 255, 20, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(214, 255, 20, 0); }
+    }
+    /* Animación de rebote suave para logos y elementos 3D */
+    @keyframes bounceLogo {
+      0%, 100% { transform: translateY(0) scale(1.1); }
+      50% { transform: translateY(-15px) scale(1.1); }
+    }
+    /* Clase de utilidad para bypass de la fuente DEMO SOLAMENTE EN NÚMEROS y SÍMBOLOS */
+    .num-safe {
+      font-family: var(--font-body) !important;
+      font-weight: 800 !important;
+      font-style: normal !important;
+    }
+    /* Utilidad para botones de redes */
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.03);
+    }
+    .social-btn:hover {
+      background: var(--lime);
+      color: #000;
+      border-color: var(--lime);
+    }
+  </style>
+</head>
+<body>
+  <div class="noise-overlay"></div>
+  <div class="chromatic-bar"></div>
+
+  <!-- NAV CON LOGOS -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand" style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/images/logo-gloaming.png" alt="Gloaming" style="height: 24px; width: auto;">
+        <span class="brand-sep" style="color: var(--text-muted);">×</span>
+        <img src="assets/images/logo-one16.png" alt="One 16 Sports" style="height: 24px; width: auto;">
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-links">
+        <a href="#bela">Bela</a>
+        <a href="#leyendas">El Show</a>
+        <a href="#venue">Venue</a>
+        <a href="#host">El Host</a>
+        <a href="#alcance">Alcance</a>
+        <a href="#sponsors">Sponsors</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero pepsi-hero">
+      <div class="hero-bg hero-bg--court"></div>
+
+      <div class="vlabel vlabel-left">GLOAMING × ONE 16 SPORTS <span class="sep">//</span> EVENTO <span class="num-safe">2026</span></div>
+      <div class="vlabel vlabel-right pixel"><span class="year num-safe">2026</span><span class="ver">/V3</span></div>
+
+      <div class="hero-content pepsi-hero-content">
+        <div class="hero-text-col">
+          <div class="hero-tag reveal">
+            <span class="pixel">&gt;_</span> SPORTS MARKETING
+          </div>
+
+          <h1 class="hero-title reveal" data-delay="100">
+            BELADA <span class="accent">DE PÁDEL.</span>
+          </h1>
+
+          <p class="hero-sub reveal" data-delay="500">
+            <strong>España <span class="num-safe">2026</span>.</strong> El espectáculo definitivo. Un evento que reúne a los creadores de contenido más picantes, leyendas históricas y figuras del deporte de Argentina y España.
+          </p>
+
+          <div class="hero-meta reveal" data-delay="700">
+            <div class="meta-item"><span class="m-label">Host Principal</span><span class="m-val">Fernando "Bela" Belasteguín</span></div>
+            <div class="meta-item"><span class="m-label">Locación</span><span class="m-val">Bela Padel Center, BCN</span></div>
+          </div>
+
+          <div class="hero-scroll reveal" data-delay="900">
+            <span class="pixel">SCROLL ↓</span>
+          </div>
+        </div>
+
+        <div class="hero-product-col reveal" data-delay="300">
+          <img src="assets/images/logo-belada.png" alt="Logo Belada de Padel" class="hero-logo-mark" style="animation: bounceLogo 3s ease-in-out infinite alternate;">
+        </div>
+      </div>
+      <div class="glitch-line line-1"></div>
+      <div class="glitch-line line-2"></div>
+    </section>
+
+    <!-- ===== BELA ===== -->
+    <section id="bela" class="section intro-section">
+      <div class="container">
+        <div class="two-col-grid" style="align-items: center;">
+          <div class="col-text reveal">
+            <span class="kicker pixel">&gt; <span class="num-safe">01</span> / EL REFERENTE</span>
+            <h2 class="section-title">FERNANDO <span class="grad-text">BELASTEGUÍN.</span></h2>
+            <p class="lead">Considerado el <strong>jugador más importante en la historia del pádel</strong>. Fue N°<span class="num-safe">1</span> del mundo durante <span class="num-safe">16</span> años consecutivos, un récord absoluto en el deporte profesional.</p>
+            <p>Con más de <span class="num-safe">230</span> títulos internacionales, Bela se convirtió en la figura que impulsó el crecimiento global de este deporte. Hoy la rompe con una fuerte presencia mediática, colaborando con referentes del deporte y la cultura.</p>
+
+            <div class="followers-row">
+              <div class="follower-item">
+                <div class="f-num num-safe"><span class="counter num-safe" data-target="472">0</span>K</div>
+                <div class="f-label pixel">SEGUIDORES IG</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-visual reveal" data-delay="200" style="display: flex; justify-content: center;">
+            <img src="assets/images/foto-bela.jpg" alt="Fernando Belasteguín" class="idea-hero-img" style="aspect-ratio: 4/5; object-fit: cover; width: 100%; max-width: 500px; border-radius: 8px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEYENDAS (EL SHOW DEL PADEL) ===== -->
+    <section id="leyendas" class="section ideas-divider" style="background: var(--bg-dark);">
+      <div class="container">
+        <div class="ideas-divider-inner reveal">
+          <span class="kicker pixel">&gt; <span class="num-safe">02</span> / EL ESPECTÁCULO</span>
+          <h2 class="ideas-divider-title">PRESTIGIO Y <span class="grad-text">LEYENDAS.</span></h2>
+          <p class="ideas-divider-sub">
+            Choques épicos entre íconos históricos del deporte y del entretenimiento para elevar el prestigio del evento y asegurar la retención de una audiencia transversal.
+          </p>
+        </div>
+
+        <div class="creator-strip reveal" data-delay="200" style="margin-top: 60px;">
+          <!-- PUYOL -->
+          <div style="position: relative; overflow: hidden; border: 1px solid var(--border-strong);">
+            <img src="assets/images/leyenda-puyol.jpg" alt="Puyol" style="width: 100%; height: 350px; object-fit: cover; filter: brightness(0.8);">
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+              <span class="pixel" style="color: var(--lime);">LEYENDA</span>
+              <h4 style="margin: 0; font-size: 28px;">PUYOL</h4>
+            </div>
+          </div>
+          <!-- BUSQUETS -->
+          <div style="position: relative; overflow: hidden; border: 1px solid var(--border-strong);">
+            <img src="assets/images/leyenda-busquets.jpg" alt="Busquets" style="width: 100%; height: 350px; object-fit: cover; filter: brightness(0.8);">
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+              <span class="pixel" style="color: var(--lime);">LEYENDA</span>
+              <h4 style="margin: 0; font-size: 28px;">BUSQUETS</h4>
+            </div>
+          </div>
+          <!-- SAVIOLA -->
+          <div style="position: relative; overflow: hidden; border: 1px solid var(--border-strong);">
+            <img src="assets/images/leyenda-saviola.jpg" alt="Saviola" style="width: 100%; height: 350px; object-fit: cover; filter: brightness(0.8);">
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+              <span class="pixel" style="color: var(--lime);">LEYENDA</span>
+              <h4 style="margin: 0; font-size: 28px;">SAVIOLA</h4>
+            </div>
+          </div>
+          <!-- VARRONE -->
+          <div style="position: relative; overflow: hidden; border: 1px solid var(--border-strong);">
+            <img src="assets/images/leyenda-varrone.jpg" alt="Nico Varrone" style="width: 100%; height: 350px; object-fit: cover; filter: brightness(0.8);">
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+              <span class="pixel" style="color: var(--blue);">PRESENTE</span>
+              <h4 style="margin: 0; font-size: 28px;">VARRONE</h4>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Y ESTO RECIÉN EMPIEZA DESTACADO -->
+        <div class="reveal" data-delay="400" style="text-align: center; margin-top: 50px; padding: 24px; background: rgba(214, 255, 20, 0.05); border: 1px dashed var(--lime);">
+          <h3 style="font-family: var(--font-body); font-weight: 800; font-size: clamp(20px, 4vw, 32px); color: var(--lime); letter-spacing: 0.05em; text-transform: uppercase; margin: 0; animation: blink 2.5s infinite;">
+            Y ESTO RECIÉN EMPIEZA...<br>
+            <span style="color: var(--text-primary); font-size: clamp(16px, 3vw, 24px);">PRÓXIMAMENTE MÁS FIGURAS CONFIRMADAS</span>
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VENUE ===== -->
+    <section id="venue" class="section idea-section">
+      <div class="container">
+        <div class="two-col-grid reversed" style="align-items: center;">
+          <div class="col-visual reveal">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <!-- MAPA ANIMADO -->
+              <div style="grid-column: span 2; position: relative; height: 160px; border: 1px solid var(--border-strong); overflow: hidden; background: #000; border-radius: 8px;">
+                <img src="assets/images/mapa-bcn.jpg" alt="Mapa Barcelona" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+                <div style="position: absolute; top: 50%; left: 50%; width: 18px; height: 18px; background: var(--lime); border-radius: 50%; transform: translate(-50%, -50%); animation: pingMap 1.5s infinite;"></div>
+                <span class="pixel" style="position: absolute; bottom: 10px; left: 10px; color: var(--lime); font-size: 12px; background: rgba(0,0,0,0.6); padding: 4px 8px;">TARGET ACQUIRED: BCN</span>
+              </div>
+              <img src="assets/images/venue-1.jpg" alt="Venue 1" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
+              <img src="assets/images/venue-2.jpg" alt="Venue 2" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; border: 1px solid var(--border);">
+              <!-- VIDEO VENUE SIN RECORTES (Aspect ratio natural) -->
+              <div style="grid-column: span 2; position: relative;">
+                <video src="assets/images/venue-video.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-strong); box-shadow: var(--shadow); display: block;"></video>
+                <div style="position: absolute; bottom: 16px; right: 16px;" class="pixel">
+                  <span style="background: var(--lime); color: black; padding: 6px 12px; font-weight: 700; font-size: 14px;">REC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-text reveal" data-delay="100">
+            <span class="kicker pixel">&gt; <span class="num-safe">03</span> / EL ESTADIO</span>
+            <h2 class="section-title">BELA PADEL <span class="grad-text">CENTER.</span></h2>
+            <p class="lead" style="margin-bottom: 20px;">
+              El epicentro del pádel mundial en Barcelona. No es solo un club, es la meca del deporte que nos garantiza el setting perfecto para el show.
+            </p>
+            <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.6;">
+              Un complejo de primer nivel europeo que respira pádel en cada rincón. Contar con estas instalaciones nos asegura una <strong>estética visual impecable</strong> para la transmisión y todas las comodidades técnicas para desplegar un setup de cámaras aéreas y repeticiones dignas de un torneo oficial. No hay punto ciego: la audiencia lo va a vivir como si estuviera al lado de la red.
+            </p>
+
+            <!-- Botón de Venue -->
+            <a href="https://belapadelcenter.com/bpc-barcelona/" target="_blank" class="hero-tag" style="margin-top: 24px; display: inline-block; background: transparent; color: var(--lime); border-color: var(--lime); font-size: 14px; padding: 12px 24px; transition: background 0.3s, color 0.3s;">
+              VER SITIO OFICIAL
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EL HOST (GUANYAR) ===== -->
+    <section id="host" class="section audiencia-section">
+      <div class="container">
+        <div class="two-col-grid" style="align-items: center;">
+          <div class="col-text reveal">
+            <span class="kicker pixel">&gt; <span class="num-safe">04</span> / EL HOST</span>
+            <h2 class="section-title">GUANYAR: <span class="grad-text">ENTRETENIMIENTO.</span></h2>
+            <p class="lead">Creador de contenido top, hiper reconocido por su humor y autenticidad. Viene de romperla toda participando en La Velada de Ibai en <span class="num-safe">2024</span>, en una pelea histórica que superó los <strong><span class="num-safe">3</span> millones de views en YouTube</strong>. Su presencia en grandes eventos lo consolida como un <strong>perfil todoterreno</strong> perfecto para conectar con la Gen Z.</p>
+
+            <div class="stats-grid stats-grid-5" style="margin-top: 30px; grid-template-columns: repeat(2, 1fr);">
+              <!-- TWITCH -->
+              <div class="stat-block">
+                <div class="stat-corner pixel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.657-6.657v-14.298h-21.698zm19.192 13.612l-4.298 4.298h-5.373l-3.045 3.045v-3.045h-4.836v-15.398h17.552v11.1zm-3.939-6.269v5.373h-2.149v-5.373h2.149zm-5.373 0v5.373h-2.149v-5.373h2.149z"/></svg></div>
+                <div class="stat-num num-safe"><span class="counter num-safe" data-target="611">0</span><span class="slash">K</span></div>
+                <div class="stat-label">SEGUIDORES</div>
+                <p class="stat-desc"><span class="num-safe">150</span>K Views Medias</p>
+                <a href="https://www.twitch.tv/guanyar" target="_blank" class="social-btn pixel">&gt; VER CANAL</a>
+              </div>
+              <!-- INSTAGRAM -->
+              <div class="stat-block">
+                <div class="stat-corner pixel"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
+                <div class="stat-num num-safe"><span class="counter num-safe" data-target="466">0</span><span class="slash">K</span></div>
+                <div class="stat-label">SEGUIDORES</div>
+                <p class="stat-desc"><span class="num-safe">1</span>M Reels Views</p>
+                <a href="https://www.instagram.com/guanyarr/" target="_blank" class="social-btn pixel">&gt; VER PERFIL</a>
+              </div>
+              <!-- YOUTUBE -->
+              <div class="stat-block">
+                <div class="stat-corner pixel"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></div>
+                <div class="stat-num num-safe"><span class="counter num-safe" data-target="505">0</span><span class="slash">K</span></div>
+                <div class="stat-label">SUSCRIPTORES</div>
+                <p class="stat-desc"><span class="num-safe">230</span>K VOD Views</p>
+                <a href="https://www.youtube.com/guanyar" target="_blank" class="social-btn pixel">&gt; VER CANAL</a>
+              </div>
+              <!-- TIKTOK -->
+              <div class="stat-block">
+                <div class="stat-corner pixel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.36z"/></svg></div>
+                <div class="stat-num num-safe"><span class="counter num-safe" data-target="245">0</span><span class="slash">K</span></div>
+                <div class="stat-label">SEGUIDORES</div>
+                <p class="stat-desc"><span class="num-safe">20</span>K Post Views</p>
+                <a href="https://www.tiktok.com/@guanyar" target="_blank" class="social-btn pixel">&gt; VER PERFIL</a>
+              </div>
+            </div>
+
+            <div class="demo-grid" style="margin-top: 30px;">
+              <div class="demo-block">
+                <div class="demo-label pixel">RANGO ETARIO</div>
+                <div class="demo-bars">
+                  <div class="demo-bar-row demo-bar-row--hot"><span class="demo-key num-safe">18-24</span><div class="demo-bar"><div class="demo-bar-fill" data-w="58"></div></div><span class="demo-val num-safe">58%</span></div>
+                  <div class="demo-bar-row demo-bar-row--hot"><span class="demo-key num-safe">25-34</span><div class="demo-bar"><div class="demo-bar-fill" data-w="20"></div></div><span class="demo-val num-safe">20%</span></div>
+                  <div class="demo-bar-row"><span class="demo-key num-safe">13-17</span><div class="demo-bar"><div class="demo-bar-fill" data-w="10"></div></div><span class="demo-val num-safe">10%</span></div>
+                </div>
+              </div>
+              <div class="demo-block">
+                <div class="demo-label pixel">GÉNERO / ESPAÑA (<span class="num-safe">87.8%</span>)</div>
+                <div class="gender-split">
+                  <div class="gender-item"><div class="gender-num num-safe">93%</div><div class="gender-key pixel">HOMBRES</div></div>
+                  <div class="gender-item"><div class="gender-num num-safe">7%</div><div class="gender-key pixel">MUJERES</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Galería Host sin recorte forzado, escala natural de la imagen -->
+          <div class="col-visual reveal" data-delay="200">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;">
+              <!-- Imagen 1 arriba ocupando todo el ancho -->
+              <img src="assets/images/guanyar-1.jpg" alt="Guanyar 1" style="grid-column: span 2; width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow);">
+              <!-- Imágenes 2 y 3 abajo en mitades -->
+              <img src="assets/images/guanyar-2.jpg" alt="Guanyar 2" style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow);">
+              <img src="assets/images/guanyar-3.jpg" alt="Guanyar 3" style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow);">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ALCANCE & CLIPPING NUEVOS VALORES ===== -->
+    <section id="alcance" class="section idea-section" style="background: var(--bg-deep);">
+      <div class="container" style="max-width: 1000px;">
+        
+        <div class="reveal" style="text-align: center;">
+          <span class="idea-label pixel">&gt; <span class="num-safe">05</span> / IMPACTO ESTIMADO</span>
+          <h2 class="section-title">STREAMING <span class="num-safe">+</span> <span class="grad-text">ON DEMAND.</span></h2>
+          <p class="lead" style="margin: 0 auto;">
+            Proyectamos un <strong>pico de espectadores en vivo de <span class="num-safe">20.000</span></strong>, manteniendo un promedio constante de <span class="num-safe">10.000</span> durante las <span class="num-safe">6</span> a <span class="num-safe">8</span> horas de transmisión ininterrumpida.
+          </p>
+        </div>
+
+        <div class="contexts-grid reveal" data-delay="100" style="margin: 50px 0; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <div class="context-card" style="min-height: 120px; padding: 24px; text-align: center; justify-content: center;">
+            <div class="context-meta">
+              <h4 class="num-safe" style="font-size: 48px; margin: 0; color: var(--lime);">+75M</h4>
+              <p style="margin-top: 8px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em;">Seguidores Totales<br>en Redes</p>
+            </div>
+          </div>
+          <div class="context-card" style="min-height: 120px; padding: 24px; text-align: center; justify-content: center;">
+            <div class="context-meta">
+              <h4 class="num-safe" style="font-size: 48px; margin: 0; color: var(--lime);">+5M</h4>
+              <p style="margin-top: 8px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em;">Views Orgánicas<br>TikTok</p>
+            </div>
+          </div>
+          <div class="context-card" style="min-height: 120px; padding: 24px; text-align: center; justify-content: center;">
+            <div class="context-meta">
+              <h4 class="num-safe" style="font-size: 48px; margin: 0; color: var(--lime);">+3M</h4>
+              <p style="margin-top: 8px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em;">Views Orgánicas<br>Instagram</p>
+            </div>
+          </div>
+          <div class="context-card" style="min-height: 120px; padding: 24px; text-align: center; justify-content: center;">
+            <div class="context-meta">
+              <h4 class="num-safe" style="font-size: 48px; margin: 0; color: var(--lime);">+2.5M</h4>
+              <p style="margin-top: 8px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em;">Views VOD<br>YouTube</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESTRATEGIA DE CLIPPING (NUEVO DISEÑO CON ÍCONOS) -->
+        <div class="reveal" data-delay="300" style="background: rgba(4, 14, 43, 0.8); border: 1px solid var(--border-strong); padding: 40px; border-left: 6px solid var(--lime); box-shadow: var(--shadow);">
+          <div class="section-subtitle pixel" style="margin-top: 0; font-size: 18px;">&gt; EL CONTENIDO VIVE DESPUÉS DEL VIVO</div>
+          <h3 style="font-family: var(--font-body); font-size: 32px; margin-bottom: 24px; color: var(--ice);">CLIPPING MULTIPLATAFORMA</h3>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
+            <!-- TikTok -->
+            <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--border);">
+              <svg style="width:36px; height:36px; color:var(--lime); margin:0 auto 12px; display:block;" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.36z"/></svg>
+              <h4 style="font-size: 18px; margin: 0;">TIKTOK</h4>
+              <p style="font-size: 13px; margin: 8px 0 0; color: var(--text-secondary);">Viralidad inmediata y códigos Gen Z.</p>
+            </div>
+            <!-- IG Reels -->
+            <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--border);">
+              <svg style="width:36px; height:36px; color:var(--lime); margin:0 auto 12px; display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <h4 style="font-size: 18px; margin: 0;">IG REELS</h4>
+              <p style="font-size: 13px; margin: 8px 0 0; color: var(--text-secondary);">Alcance aspiracional y engagement.</p>
+            </div>
+            <!-- YT Shorts -->
+            <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border: 1px solid var(--border);">
+              <svg style="width:36px; height:36px; color:var(--lime); margin:0 auto 12px; display:block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              <h4 style="font-size: 18px; margin: 0;">YT SHORTS</h4>
+              <p style="font-size: 13px; margin: 8px 0 0; color: var(--text-secondary);">Retención, polémicas y jugadas top.</p>
+            </div>
+          </div>
+          
+          <p style="font-size: 15px; margin-top: 24px; margin-bottom: 0; text-align: center;">Efecto multiplicador del alcance para sponsors mediante la extracción de <strong>formatos verticales nativos</strong> en tiempo récord.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== TABLA DE SPONSORS ===== -->
+    <section id="sponsors" class="section ideas-divider" style="background: var(--bg-dark);">
+      <div class="container">
+        <div class="ideas-divider-inner reveal">
+          <span class="kicker pixel">&gt; <span class="num-safe">06</span> / OPORTUNIDADES</span>
+          <h2 class="ideas-divider-title">PAQUETES DE <span class="grad-text">SPONSORSHIP.</span></h2>
+          <p class="ideas-divider-sub">Integración orgánica. Destacate en la cancha, en el streaming y en los clips virales on-demand.</p>
+        </div>
+
+        <div class="reveal" data-delay="200" style="margin-top: 60px; overflow-x: auto;">
+          <table style="width: 100%; min-width: 860px; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border); box-shadow: var(--shadow);">
+            <thead>
+              <tr style="background: var(--bg-card-light); border-bottom: 2px solid var(--lime);">
+                <th style="padding: 24px; text-align: left; font-family: var(--font-display); font-size: 24px; color: var(--ice);">PAQUETE</th>
+                <th style="padding: 24px; text-align: left; font-family: var(--font-display); font-size: 24px; color: var(--ice);">ENTREGABLES CLAVE</th>
+                <th style="padding: 24px; text-align: right; font-family: var(--font-display); font-size: 24px; color: var(--ice);">INVERSIÓN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- PRINCIPAL -->
+              <tr style="border-bottom: 1px solid var(--border); transition: background 0.3s;" onmouseover="this.style.background='var(--bg-card-light)'" onmouseout="this.style.background='transparent'">
+                <td style="padding: 24px; vertical-align: top; width: 25%;">
+                  <div class="prize-tag pixel num-safe">01</div>
+                  <h4 style="color: var(--lime); font-size: 32px; margin: 8px 0;">PRINCIPAL</h4>
+                </td>
+                <td style="padding: 24px; vertical-align: top; width: 55%;">
+                  <div style="display: grid; gap: 10px; font-size: 15px; color: var(--text-secondary);">
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--lime);">+</span> Naming oficial del evento y apertura de <span class="num-safe">60s</span>.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--lime);">+</span> Presencia prioritaria en backdrop de prensa.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--lime);">+</span> Mosca permanente en marcador del stream y logo fijo en red.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--lime);">+</span> Momentos exclusivos (Replays, Play of the Match, Placement).</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--lime);">+</span> <span class="num-safe">10</span> clips personalizados y mención en contenidos oficiales.</div>
+                  </div>
+                </td>
+                <td style="padding: 24px; vertical-align: top; text-align: right; width: 20%;">
+                  <span class="price pixel num-safe" style="display: block; font-size: 28px; margin: 0;">€ 90.000</span>
+                </td>
+              </tr>
+              <!-- PREMIUM -->
+              <tr style="border-bottom: 1px solid var(--border); transition: background 0.3s;" onmouseover="this.style.background='var(--bg-card-light)'" onmouseout="this.style.background='transparent'">
+                <td style="padding: 24px; vertical-align: top;">
+                  <div class="prize-tag pixel num-safe">02</div>
+                  <h4 style="color: var(--blue); font-size: 32px; margin: 8px 0;">PREMIUM</h4>
+                </td>
+                <td style="padding: 24px; vertical-align: top;">
+                  <div style="display: grid; gap: 10px; font-size: 15px; color: var(--text-secondary);">
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--blue);">+</span> Presencia secundaria en backdrop y logo en laterales.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--blue);">+</span> Mosca rotativa en la transmisión.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--blue);">+</span> Momentos exclusivos: Top Highlights y Placement.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--blue);">+</span> Mención en cortes del stream.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--blue);">+</span> <span class="num-safe">5</span> clips personalizados y mención en <span class="num-safe">5</span> contenidos.</div>
+                  </div>
+                </td>
+                <td style="padding: 24px; vertical-align: top; text-align: right;">
+                  <span class="price pixel num-safe" style="display: block; font-size: 28px; margin: 0; color: var(--ice);">€ 70.000</span>
+                </td>
+              </tr>
+              <!-- OFFICIAL -->
+              <tr style="border-bottom: 1px solid var(--border); transition: background 0.3s;" onmouseover="this.style.background='var(--bg-card-light)'" onmouseout="this.style.background='transparent'">
+                <td style="padding: 24px; vertical-align: top;">
+                  <div class="prize-tag pixel num-safe">03</div>
+                  <h4 style="color: var(--ice); font-size: 32px; margin: 8px 0;">OFFICIAL</h4>
+                </td>
+                <td style="padding: 24px; vertical-align: top;">
+                  <div style="display: grid; gap: 10px; font-size: 15px; color: var(--text-secondary);">
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--ice);">+</span> Presencia secundaria en backdrop.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--ice);">+</span> Activación secundaria en el venue.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--ice);">+</span> Menciones gráficas puntuales en el stream.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--ice);">+</span> <span class="num-safe">2</span> clips personalizados para RRSS.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--ice);">+</span> Mención en stories del torneo.</div>
+                  </div>
+                </td>
+                <td style="padding: 24px; vertical-align: top; text-align: right;">
+                  <span class="price pixel num-safe" style="display: block; font-size: 28px; margin: 0; color: var(--ice);">€ 50.000</span>
+                </td>
+              </tr>
+              <!-- SUPPORT -->
+              <tr style="transition: background 0.3s;" onmouseover="this.style.background='var(--bg-card-light)'" onmouseout="this.style.background='transparent'">
+                <td style="padding: 24px; vertical-align: top;">
+                  <div class="prize-tag pixel num-safe">04</div>
+                  <h4 style="color: var(--text-muted); font-size: 32px; margin: 8px 0;">SUPPORT</h4>
+                </td>
+                <td style="padding: 24px; vertical-align: top;">
+                  <div style="display: grid; gap: 10px; font-size: 15px; color: var(--text-secondary);">
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--text-muted);">+</span> Presencia en backdrop general.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--text-muted);">+</span> Presencia en zonas comunes del venue.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--text-muted);">+</span> Agradecimiento en la transmisión.</div>
+                    <div style="display: flex; gap: 10px;"><span style="color:var(--text-muted);">+</span> Agradecimiento en <span class="num-safe">1</span> publicación oficial en redes.</div>
+                  </div>
+                </td>
+                <td style="padding: 24px; vertical-align: top; text-align: right;">
+                  <span class="price pixel num-safe" style="display: block; font-size: 28px; margin: 0; color: var(--text-muted);">€ 20.000</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACTIVACIONES Y BRANDING ===== -->
+    <section id="activaciones" class="section idea-section" style="background: var(--bg-deep);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="kicker pixel">&gt; <span class="num-safe">07</span> / EXPOSICION TOTAL</span>
+          <h2 class="section-title">BRANDING <span class="num-safe">+</span> <span class="grad-text">ACTIVACIONES.</span></h2>
+          <p class="lead">Impacto 360° para tu marca en cada punto de contacto con la audiencia.</p>
+        </div>
+
+        <div class="mechanic-cards">
+          <!-- Live Streaming -->
+          <div class="mechanic-card reveal">
+            <img src="assets/images/activacion-stream.jpg" alt="Live Streaming" style="width: 100%; height: auto; display: block; background: rgba(0,0,0,0.4); margin-bottom: 20px; border-radius: 4px;">
+            <div class="mechanic-tag pixel">LIVE STREAMING</div>
+            <h3>PANTALLA FULL</h3>
+            <p>Marcador permanente, moscas y zócalos integrados nativamente en la transmisión en vivo.</p>
+          </div>
+          <!-- Cancha -->
+          <div class="mechanic-card mechanic-card--alt reveal" data-delay="150">
+            <img src="assets/images/activacion-cancha.jpg" alt="En Locación" style="width: 100%; height: auto; display: block; background: rgba(0,0,0,0.4); margin-bottom: 20px; border-radius: 4px;">
+            <div class="mechanic-tag pixel">EN LOCACIÓN</div>
+            <h3>ACCION EN CANCHA</h3>
+            <p>Tu logo al lado de las estrellas. Presencia ineludible en la red y laterales de la pista central.</p>
+          </div>
+          <!-- Prensa y Otras -->
+          <div class="mechanic-card reveal" data-delay="300">
+            <img src="assets/images/activacion-backdrop.jpg" alt="Backstage" style="width: 100%; height: auto; display: block; background: rgba(0,0,0,0.4); margin-bottom: 20px; border-radius: 4px;">
+            <div class="mechanic-tag pixel">BACKSTAGE <span class="num-safe">+</span> REPLAYS</div>
+            <h3>MOMENTOS TOP</h3>
+            <p>Aparición en backdrop de notas, auspicio de "Play of the match", product placement e indumentaria.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA / CIERRE CON RENDER FLOTANTE ===== -->
+    <section class="section" style="background: linear-gradient(0deg, #02091f, var(--bg-dark)); padding: 120px 20px;">
+      <div class="container reveal">
+        <div class="two-col-grid" style="align-items: center; grid-template-columns: 1.4fr 1fr;">
+          <!-- Espacio para el PNG flotante GIGANTE Y ADAPTADO -->
+          <div class="col-visual" style="text-align: center; position: relative; height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+             <img src="assets/images/pelota-flotante.png" alt="Cierre Padel" style="width: 100%; max-width: 800px; object-fit: contain; animation: bounceLogo 4s ease-in-out infinite alternate; filter: drop-shadow(0 30px 50px rgba(214, 255, 20, 0.5)); transform: scale(1.2);">
+          </div>
+          <!-- Texto del CTA -->
+          <div class="col-text" style="text-align: left; position: relative; z-index: 2;">
+            <h2 style="font-family: var(--font-display); font-size: clamp(70px, 11vw, 130px); color: var(--ice); line-height: 0.85; margin-bottom: 24px; text-transform: uppercase;">
+              EL SAQUE ESTA <br><span class="grad-text">DE TU LADO.</span>
+            </h2>
+            <p class="lead" style="margin: 0 0 40px; color: var(--text-secondary); font-size: 20px;">
+              No te quedes afuera del partido del año. Posicioná tu marca en el centro del evento que va a romper todas las métricas.
+            </p>
+            <a href="https://gloaming.agency/contacto/" target="_blank" class="hero-tag" style="background: var(--lime); color: black; font-size: 24px; padding: 18px 36px; border: none; box-shadow: 0 0 30px rgba(214, 255, 20, 0.4); transition: transform 0.3s; display: inline-block; font-weight: 900;">
+              ENTRAR A LA CANCHA
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer footer-minimal">
+    <div class="container">
+      <div class="footer-min-inner">
+        <div class="footer-cobrand" style="display: flex; align-items: center; gap: 12px;">
+          <img src="assets/images/logo-gloaming.png" alt="Gloaming" style="height: 24px; filter: grayscale(1) opacity(0.5);">
+          <span style="color: rgba(255,255,255,0.2);">×</span>
+          <img src="assets/images/logo-one16.png" alt="One 16 Sports" style="height: 24px; filter: grayscale(1) opacity(0.5);">
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span class="num-safe">2026</span> GLOAMING SPORTS MKT · ALL RIGHTS RESERVED</span>
+        <span class="pixel">&gt; BELADA DE PADEL / ESPAÑA <span class="num-safe">2026</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
