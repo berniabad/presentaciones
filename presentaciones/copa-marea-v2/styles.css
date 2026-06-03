@@ -597,15 +597,12 @@ a { color: inherit; text-decoration: none; }
 
 /* hero-bg: foto a sangre a la derecha, como fondo del hero (sin borde/glow/animación) */
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; display: block; }
-/* funde el borde izquierdo de la foto con el fondo negro */
-.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--bg) 0%, rgba(10,10,10,0) 24%); pointer-events: none; }
 .hero-text { align-self: center; justify-self: start; text-align: left; max-width: min(600px, 48vw); }
 
 @media (max-width: 980px) {
   /* mobile: el hero pasa a columna, la foto arriba como banner */
   .hero { display: block; min-height: 0; padding: 96px 0 56px; }
   .hero-bg { position: relative; width: 100%; height: 42vh; min-height: 300px; }
-  .hero-bg::after { background: linear-gradient(0deg, var(--bg) 0%, rgba(10,10,10,0) 34%); }
   .hero-text { max-width: none; margin-top: 26px; }
 }
 .hero-crest { position: relative; display: flex; align-items: center; justify-content: center; min-height: 520px; }
