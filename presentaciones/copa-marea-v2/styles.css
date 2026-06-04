@@ -98,9 +98,10 @@ a { color: inherit; text-decoration: none; }
 .section-title {
   font-weight: 200;
   font-size: clamp(36px, 5.6vw, 80px);
-  line-height: 1.0;
+  line-height: 1.1;
   letter-spacing: 0;
   margin-bottom: 24px;
+  padding-bottom: .06em;
 }
 /* el acento de color va en itálica editorial */
 .section-title .grad-text, .section-title .grad-violet,
@@ -577,7 +578,7 @@ a { color: inherit; text-decoration: none; }
 .gtable th.tier span { display: block; font-size: 9px; letter-spacing: .1em; opacity: .8; font-weight: 600; }
 
 /* Cápsulas / fit tag */
-.fit-tag { display: inline-block; margin-top: 14px; font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border-violet); color: var(--violet-bright); background: rgba(139,92,246,.07); }
+.fit-tag { display: inline-block; margin-top: 14px; font-size: 11px; font-weight: 600; letter-spacing: .04em; line-height: 1.45; padding: 6px 12px; border-radius: 10px; border: 1px solid var(--border-violet); color: var(--violet-bright); background: rgba(139,92,246,.07); text-align: center; }
 .cards.c5 { grid-template-columns: repeat(5, 1fr); }
 
 @media (max-width: 980px) {
@@ -889,4 +890,85 @@ a { color: inherit; text-decoration: none; }
   .vs-block { padding: 24px 22px 24px; }
   .persona-grid { grid-template-columns: 1fr; gap: 16px; }
   .act-other { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   COPA MAREA — mejoras SOLO MOBILE (desktop queda intacto)
+   ============================================================ */
+
+/* C · que las fotos en otra proporción no corten caras (todas las vistas) */
+.team-card img { object-position: center 24%; }
+.cap-media img, .cap-media .cap-vid { object-position: center 26%; }
+.media-tall img { object-position: center 18%; }
+
+/* hint "deslizá" (solo visible en mobile, junto a los carruseles) */
+.swipe-hint { display: none; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--t-3); margin-top: 14px; }
+.swipe-hint::after { content: ' →'; color: var(--green); }
+
+@media (max-width: 640px) {
+
+  .swipe-hint { display: block; }
+
+  /* ----- Carruseles full-bleed (tarjetas separadas) ----- */
+  .teams, .capsules, .flow, .cards-carousel, .packages, .showcase {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    align-items: stretch;
+    gap: 12px;
+    /* full-bleed: el carrusel respira hasta el borde de la pantalla */
+    margin-inline: calc(var(--pad) * -1);
+    padding: 2px var(--pad) 16px;
+    scroll-padding-left: var(--pad);
+  }
+  .teams::-webkit-scrollbar, .capsules::-webkit-scrollbar, .flow::-webkit-scrollbar,
+  .cards-carousel::-webkit-scrollbar, .packages::-webkit-scrollbar, .showcase::-webkit-scrollbar { display: none; }
+  .team-card          { flex: 0 0 76%; scroll-snap-align: start; }
+  .capsule            { flex: 0 0 66%; scroll-snap-align: start; }
+  .flow-step          { flex: 0 0 72%; scroll-snap-align: start; }
+  .cards-carousel > * { flex: 0 0 80%; scroll-snap-align: start; }
+  .packages > .pkg-card { flex: 0 0 84%; scroll-snap-align: start; }
+  .showcase > .sc-card  { flex: 0 0 90%; scroll-snap-align: start; }
+  .team-card img { height: 240px; }
+
+  /* showcase: tarjetas más anchas + matriz "En el contenido" que no se rompe */
+  .sc-body { padding: 22px 18px 24px; }
+  .cmatrix .cm-head, .cmatrix .cm-row { grid-template-columns: 1fr 34px 40px 46px; gap: 5px; }
+  .cmatrix .cm-head span { font-size: 8.5px; letter-spacing: 0; }
+  .cmatrix .cm-row > span:first-child { font-size: 12.5px; }
+  .cmatrix .cm-row > span:not(:first-child) { font-size: 14px; }
+
+  /* ----- Carrusel de STATS (mantiene el recuadro, scrollea adentro) ----- */
+  .stats.carousel-mob {
+    display: flex; grid-template-columns: none;
+    overflow-x: auto; overflow-y: hidden;
+    scroll-snap-type: x mandatory; scrollbar-width: none;
+  }
+  .stats.carousel-mob::-webkit-scrollbar { display: none; }
+  .stats.carousel-mob .stat { flex: 0 0 58%; scroll-snap-align: start; border-right: 1px solid var(--border); }
+  .stats.carousel-mob .stat:last-child { border-right: 0; }
+
+  /* ----- D · Camilita: 3 métricas en fila, compactas ----- */
+  .stats.host-stats { grid-template-columns: repeat(3, 1fr); overflow: visible; }
+  .stats.host-stats .stat { padding: 18px 8px; border-right: 1px solid var(--border); overflow: visible; }
+  .stats.host-stats .stat:last-child { border-right: 0; }
+  .stats.host-stats .stat .n { font-size: 23px; }
+  .stats.host-stats .stat .l { margin-top: 8px; font-size: 9px; letter-spacing: .05em; }
+
+  /* ----- E · "Un mes de adrenalina": 4 stats en 2x2 compacto ----- */
+  .stats.compact-mob { grid-template-columns: 1fr 1fr; }
+  .stats.compact-mob .stat { padding: 22px 16px; border-right: 1px solid var(--border); }
+  .stats.compact-mob .stat:nth-child(2n) { border-right: 0; }
+  .stats.compact-mob .stat .l { font-size: 10px; }
+
+  /* ----- F · El venue: título antes de la imagen en mobile ----- */
+  .venue-block .col-text { order: -1; }
+
+  /* ----- vs-block: el caption del % no se amontona ----- */
+  .vs-cap { flex-wrap: wrap; gap: 4px 12px; }
+  .vs-cap span { flex: 1 1 100%; }
 }
