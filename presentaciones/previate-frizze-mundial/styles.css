@@ -825,21 +825,19 @@ strong {
 
 .inapp-visual-stack figure {
   margin: 0;
-  padding: 12px;
-  border: 1px solid var(--border);
-  background: rgba(21, 21, 23, 0.72);
-  transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out), background 0.4s var(--ease-out);
+  padding: 0;
+  border: 0;
+  background: none;
+  transition: transform 0.4s var(--ease-out);
 }
 
 .inapp-visual-stack figure:hover {
   transform: translateY(-6px);
-  border-color: rgba(200, 255, 24, 0.34);
-  background: var(--bg-card-light);
 }
 
 .inapp-visual-stack img {
   width: 100%;
-  max-height: 300px;
+  max-height: 360px;
   object-fit: contain;
   filter: drop-shadow(0 18px 48px rgba(0, 0, 0, 0.42));
 }
@@ -859,6 +857,10 @@ strong {
   grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.86fr);
   align-items: center;
   gap: clamp(42px, 6vw, 88px);
+}
+
+.inapp-games-grid {
+  grid-template-columns: minmax(0, 0.82fr) minmax(460px, 1fr);
 }
 
 .inapp-index {
@@ -933,17 +935,15 @@ strong {
 }
 
 .inapp-mockup-card {
-  padding: 16px;
-  border: 1px solid var(--border);
-  background: rgba(21, 21, 23, 0.76);
+  padding: 0;
+  border: 0;
+  background: none;
   filter: drop-shadow(0 28px 70px rgba(0, 0, 0, 0.36));
-  transition: transform 0.45s var(--ease-out), border-color 0.45s var(--ease-out), background 0.45s var(--ease-out);
+  transition: transform 0.45s var(--ease-out);
 }
 
 .inapp-mockup-card:hover {
   transform: translateY(-8px) rotate(1deg);
-  border-color: rgba(200, 255, 24, 0.34);
-  background: var(--bg-card-light);
 }
 
 .inapp-mockup-card img {
