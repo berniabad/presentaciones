@@ -39,6 +39,45 @@
   }, { threshold: 0.6 });
   document.querySelectorAll('.count').forEach((c) => cntObs.observe(c));
 
+  /* ---------- LANGUAGE TOGGLE (ES / EN) ---------- */
+  const NAV = {
+    es: { top: '', ahora: 'Por qué ahora', 'que-es': 'Qué es', torneo: 'El torneo', alcance: 'Alcance', marcas: 'Tu marca', cta: 'Sumate' },
+    en: { top: '', ahora: 'Why now', 'que-es': 'What it is', torneo: 'The tournament', alcance: 'Reach', marcas: 'Your brand', cta: 'Join' },
+  };
+  const deckEn = document.getElementById('deck-en');
+  const deckEs = document.getElementById('deck-es');
+  const langButtons = document.querySelectorAll('.lang-toggle button');
+
+  const forceReveal = (root) => {
+    if (!root) return;
+    root.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+    root.querySelectorAll('.count').forEach((c) => { c.textContent = c.dataset.count; });
+  };
+
+  const setLang = (lang, opts) => {
+    lang = lang === 'en' ? 'en' : 'es';
+    document.documentElement.lang = lang;
+    if (deckEn) deckEn.hidden = lang !== 'en';
+    if (deckEs) deckEs.hidden = lang !== 'es';
+    document.querySelectorAll('[data-sec]').forEach((a) => {
+      const sec = a.dataset.sec;
+      a.setAttribute('href', '#' + lang + '-' + sec);
+      const label = NAV[lang][sec];
+      if (label) a.textContent = label;
+    });
+    const cta = document.querySelector('[data-cta]');
+    if (cta) cta.textContent = NAV[lang].cta;
+    langButtons.forEach((b) => b.classList.toggle('active', b.dataset.lang === lang));
+    if (opts && opts.animate) forceReveal(lang === 'en' ? deckEn : deckEs);
+    try { localStorage.setItem('copa-lang', lang); } catch (e) {}
+  };
+
+  langButtons.forEach((b) => b.addEventListener('click', () => setLang(b.dataset.lang, { animate: true })));
+
+  let savedLang = 'es';
+  try { savedLang = localStorage.getItem('copa-lang') || 'es'; } catch (e) {}
+  setLang(savedLang, { animate: savedLang === 'en' });
+
   /* ---------- NAV: scroll state + mobile toggle ---------- */
   const nav = document.querySelector('.nav');
   if (nav) {
