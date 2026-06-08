@@ -1,5 +1,7 @@
 # Source PowerPoint files — exceed GitHub's 100 MB limit, kept locally only
 assets/ppts/
+# PPTs de referencia (Maxus, etc.), pesados: se guardan local, no versionar
+*.pptx
 
 # Media extraído de los PPT (referencia local, no versionar)
 assets/copa-marea/_media/
