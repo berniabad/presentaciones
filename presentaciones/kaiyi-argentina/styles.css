@@ -127,6 +127,8 @@ a{color:inherit;text-decoration:none}
 .divider .d-num{font-weight:900;font-size:clamp(80px,18vw,220px);line-height:.8;color:transparent;
   -webkit-text-stroke:2px rgba(255,255,255,.18);letter-spacing:-.04em}
 .divider .d-title{font-weight:900;font-size:clamp(38px,7vw,92px);line-height:.98;letter-spacing:-.02em;margin-top:10px}
+.divider-title-row{display:flex;align-items:center;gap:clamp(24px,5vw,72px);flex-wrap:wrap}
+.divider-gep-logo{width:clamp(160px,20vw,320px);height:auto;filter:drop-shadow(0 16px 34px rgba(0,0,0,.45))}
 .divider .d-sub{font-size:clamp(15px,1.6vw,19px);color:var(--t2);max-width:640px;margin-top:22px;line-height:1.6}
 .divider-bg{position:absolute;inset:0;z-index:0;opacity:.28}
 .divider-bg img{width:100%;height:100%;object-fit:cover}
@@ -388,6 +390,26 @@ a{color:inherit;text-decoration:none}
 .locations{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .loc{font-size:13px;font-weight:600;color:#fff;border:1px solid var(--line-2);border-radius:8px;padding:9px 16px;background:var(--card)}
 
+/* ---------- Dealer network ---------- */
+.dealer-network{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);gap:34px;align-items:center}
+.dealer-cards{display:flex;flex-direction:column;gap:18px}
+.dealer-card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.22)}
+.dealer-card-head{padding:22px 24px 18px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.18)}
+.dealer-kicker{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:7px}
+.dealer-card h3{font-size:clamp(20px,2vw,28px);font-weight:900;line-height:1.05;letter-spacing:-.01em}
+.dealer-table{display:flex;flex-direction:column}
+.dealer-row{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;padding:11px 24px;border-bottom:1px solid rgba(255,255,255,.07);align-items:center}
+.dealer-row:last-child{border-bottom:none}
+.dealer-row:nth-child(even){background:rgba(255,255,255,.035)}
+.dealer-row-head{background:#232323;color:#fff;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:900}
+.dealer-row strong{font-size:13px;text-transform:uppercase;color:#fff;line-height:1.25}
+.dealer-row span{font-size:13px;color:var(--t2);line-height:1.3}
+.dealer-target{margin:26px auto 0;max-width:560px;text-align:center;font-size:clamp(16px,1.7vw,22px);font-weight:800;letter-spacing:.01em;color:#fff;background:linear-gradient(90deg,rgba(255,0,0,.12),rgba(255,0,0,.04));border:1px solid rgba(255,0,0,.28);border-radius:14px;padding:16px 24px}
+.dealer-target strong{color:var(--red);font-weight:900}
+.dealer-map{position:relative;display:flex;justify-content:center;align-items:center;min-height:680px}
+.dealer-map::before{content:'';position:absolute;inset:8% 3%;background:radial-gradient(circle at 50% 45%,rgba(255,0,0,.22),transparent 58%);filter:blur(28px);opacity:.8}
+.dealer-map img{position:relative;z-index:1;width:100%;max-height:780px;object-fit:contain;filter:drop-shadow(0 0 28px rgba(255,0,0,.22))}
+
 /* ---------- CTA / closing ---------- */
 .cta{position:relative;text-align:center;padding:clamp(90px,12vw,160px) 0;overflow:hidden;
   background:radial-gradient(90% 80% at 50% 40%,rgba(255,0,0,.18),transparent 60%),#070707}
@@ -423,8 +445,8 @@ a{color:inherit;text-decoration:none}
 .tl2-item::before{content:'';position:absolute;left:-45px;top:3px;width:16px;height:16px;border-radius:50%;background:var(--red);border:3px solid var(--bg)}
 .tl2-year{font-weight:900;font-size:26px;color:var(--red);line-height:1;letter-spacing:-.01em}
 .tl2-item p{font-size:14px;color:var(--t2);margin-top:8px;max-width:600px;line-height:1.55}
-.tl2-photo{margin-top:14px;border-radius:12px;overflow:hidden;max-width:320px;border:1px solid var(--line-2)}
-.tl2-photo img{width:100%;display:block}
+.tl2-photo{margin-top:14px;border-radius:12px;overflow:hidden;max-width:320px;border:1px solid var(--line-2);background:#111}
+.tl2-photo img{width:100%;height:auto;display:block;object-fit:contain}
 
 /* ---------- Org chart ---------- */
 .org{display:flex;flex-direction:column;align-items:center}
@@ -444,7 +466,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- Vertical bar charts (4 bars) ---------- */
 .vbars4{display:flex;align-items:flex-end;gap:22px;height:300px;padding-top:34px}
-.vb{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.vb{flex:1;display:grid;grid-template-rows:auto 1fr auto;justify-items:center;align-items:end;height:100%}
 .vb .vb-fill{width:100%;max-width:120px;border-radius:6px 6px 0 0;height:0;transition:height 1.2s var(--ease)}
 .vb.muted .vb-fill{background:#33363b}
 .vb.hi .vb-fill{background:linear-gradient(180deg,var(--red),var(--red-deep))}
@@ -475,6 +497,41 @@ a{color:inherit;text-decoration:none}
 .surge-wrap{display:grid;grid-template-columns:46px 1fr;gap:8px}
 .surge-yaxis{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;font-size:11px;color:var(--t3);font-weight:600;padding:4px 0 26px}
 .surge-xaxis{grid-column:2;display:flex;justify-content:space-between;font-size:11px;color:var(--t3);font-weight:600;margin-top:6px}
+
+/* ---------- Origin line chart ---------- */
+.origin-card{padding:30px 32px 26px}
+.origin-legend{display:flex;gap:30px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.origin-legend span{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:var(--t2)}
+.origin-legend i{width:42px;height:5px;border-radius:999px;display:inline-block}
+.origin-legend i.imp{background:var(--red)}
+.origin-legend i.dom{background:#3f7dd8}
+.origin-chart{height:clamp(300px,42vw,430px);max-width:100%;overflow:hidden}
+.origin-chart svg{width:100%;height:100%;overflow:visible;display:block}
+.origin-grid line{stroke:rgba(255,255,255,.08);stroke-width:1}
+.origin-y text,.origin-x text{fill:var(--t3);font-size:12px;font-weight:700}
+.origin-line{fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
+.origin-line.imp{stroke:var(--red)}
+.origin-line.dom{stroke:#3f7dd8}
+.origin-end{font-size:22px;font-weight:900}
+.origin-end.imp{fill:var(--red)}
+.origin-end.dom{fill:#6ea4ff}
+
+/* ---------- X7 price band charts ---------- */
+.x7-chart-stack{display:flex;flex-direction:column;gap:24px}
+.price-band-chart{padding:28px 30px 30px}
+.hybrid-legend{display:inline-flex;align-items:center;gap:9px;font-size:12px;color:var(--t2);font-weight:700;margin:-8px 0 18px}
+.hybrid-legend span{width:16px;height:16px;border-radius:4px;background:var(--red);box-shadow:0 0 0 4px rgba(255,0,0,.16)}
+.band-axis{display:flex;justify-content:space-between;margin-left:190px;padding-bottom:10px;border-bottom:1px solid var(--line-2);font-size:11px;color:var(--t3);font-weight:800}
+.band-rows{display:flex;flex-direction:column;gap:13px;margin-top:14px}
+.band-rows.dense{gap:9px}
+.band-row{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center}
+.band-label{font-size:14px;color:var(--t2);font-weight:700;text-align:right;line-height:1.15}
+.band-track{position:relative;height:34px;background:linear-gradient(90deg,rgba(255,255,255,.035),rgba(255,255,255,.01));border-radius:7px;overflow:hidden}
+.band-track::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.13) 0 1px,transparent 1px 12.5%);opacity:.55}
+.band-fill{position:absolute;left:var(--start);width:var(--width);top:5px;height:24px;min-width:48px;border-radius:6px;background:#33363b;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.band-row.hybrid .band-label{color:#fff}
+.band-row.hybrid .band-fill{background:linear-gradient(90deg,var(--red-deep),var(--red));box-shadow:0 0 0 1px rgba(255,255,255,.12),0 0 22px rgba(255,0,0,.25)}
+.band-row.hybrid .band-track{box-shadow:inset 0 0 0 1px rgba(255,0,0,.4);background:rgba(255,0,0,.06)}
 
 /* ---------- Phone mockups ---------- */
 .phone-row{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
@@ -568,6 +625,19 @@ a{color:inherit;text-decoration:none}
   .org-row{grid-template-columns:repeat(2,1fr)}
   .org-card,.org-card.lead-card{width:100%}
   .stack-row{grid-template-columns:70px 1fr;gap:12px}
+  .origin-card{padding:22px 18px}
+  .origin-chart{height:300px}
+  .origin-y text,.origin-x text{font-size:14px}
+  .origin-end{font-size:18px}
+  .band-axis{margin-left:0;font-size:10px}
+  .band-row{grid-template-columns:1fr;gap:7px}
+  .band-label{text-align:left}
+  .band-track{height:36px}
+  .dealer-network{grid-template-columns:1fr;gap:28px}
+  .dealer-map{min-height:0}
+  .dealer-map img{max-height:620px}
+  .dealer-row{grid-template-columns:1fr;gap:4px;padding:11px 18px}
+  .dealer-row-head{grid-template-columns:1fr 1fr;gap:12px}
   .persona2{grid-template-columns:1fr}
   .persona2 .p2-side img{min-height:300px}
   .p2-cols,.p2-msgs{grid-template-columns:1fr}
@@ -597,8 +667,8 @@ a{color:inherit;text-decoration:none}
 .org-card .oc-photo img{filter:none}
 
 /* Timeline · fotos chicas y horizontales */
-.tl2-photo{max-width:240px}
-.tl2-photo img{aspect-ratio:16/10;object-fit:cover;height:auto}
+.tl2-photo{max-width:300px}
+.tl2-photo img{height:auto;object-fit:contain}
 
 /* Precios destacados (sets competitivos) */
 .price-row{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 22px}
