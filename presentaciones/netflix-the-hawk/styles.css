@@ -229,6 +229,19 @@ img{display:block;max-width:100%}
 .block-label + .duo,
 .block-label + .alt-duos{margin-top:0}
 
+/* ---------- EVENTO: sub-bloques con ritmo uniforme ---------- */
+.evt-block{margin-top:54px}
+.evt-block>.block-label{margin-bottom:18px}
+.evt-block>.cards,.evt-block>.tag-grid,.evt-block>.credits{margin-top:0}
+.credits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.credits .cr{border-top:1px solid var(--line2);padding-top:16px}
+.credits .cr-k{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:7px}
+.credits .cr-v{display:block;font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.credits .cr p{font-size:13.5px;color:var(--t2);font-weight:300;line-height:1.5}
+.evt-note{margin-top:14px;font-size:13px;color:var(--t3);font-weight:300;line-height:1.55;max-width:700px}
+.evt-foot{margin-top:54px;padding-top:30px;border-top:1px solid var(--line);font-size:15px;color:var(--t2);font-weight:300;line-height:1.6;max-width:780px}
+.evt-foot strong{color:#fff;font-weight:600}
+
 /* ---------- REVEAL ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.visible{opacity:1;transform:none}
@@ -249,6 +262,7 @@ img{display:block;max-width:100%}
   .clip-phone{max-width:300px}
   .duo{grid-template-columns:1fr}
   .alt-duos{grid-template-columns:1fr}
+  .credits{grid-template-columns:1fr;gap:22px}
 }
 @media(max-width:760px){
   .hooks{grid-template-columns:1fr}
