@@ -222,6 +222,13 @@ img{display:block;max-width:100%}
 .alt-duo h4{font-size:15px;font-weight:700;letter-spacing:.01em;margin-bottom:6px}
 .alt-duo p{font-size:13.5px;color:var(--t2);font-weight:300;line-height:1.5}
 
+/* el rotulo (block-label) va pegado a su contenido de abajo, no flotando */
+.block-label + .cards,
+.block-label + .tag-grid,
+.block-label + .hooks,
+.block-label + .duo,
+.block-label + .alt-duos{margin-top:0}
+
 /* ---------- REVEAL ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.visible{opacity:1;transform:none}
