@@ -14,6 +14,9 @@ presentaciones/belada-padel-presentacion/assets/extracted-pdf/
 # McDonald's — screenshots de QA (artefactos de dev, ~30MB)
 presentaciones/previate-mcdonald/qa/
 
+# Netflix The Hawk — originales crudos de las fotos (material fuente, ~47MB)
+assets/netflix-the-hawk/
+
 # OS / editor junk
 .DS_Store
 Thumbs.db
