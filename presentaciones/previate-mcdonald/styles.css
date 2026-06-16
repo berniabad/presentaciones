@@ -2018,6 +2018,7 @@ a {
   .ideas-divider::before { width: 800px; height: 800px; }
   .wasabi-block { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; margin-top: 80px; }
   .wasabi-gallery { display: grid; grid-template-columns: 1fr 1fr; }
+  .wasabi-gallery--single { grid-template-columns: 1fr; }
   .wasabi-img { height: 480px; }
   .contexts-grid { grid-template-columns: repeat(3, 1fr); }
   .context-img { height: 140px; }
