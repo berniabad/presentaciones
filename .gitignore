@@ -9,10 +9,10 @@ assets/copa-marea/*.pptx
 assets/copa-marea/*.pdf
 
 # Belada — imágenes intermedias de extracción del PDF (no versionar, ~154MB)
-presentaciones/belada-padel-presentacion/assets/extracted-pdf/
+presentaciones/_viejas/belada-padel-presentacion/assets/extracted-pdf/
 
 # McDonald's — screenshots de QA (artefactos de dev, ~30MB)
-presentaciones/previate-mcdonald/qa/
+presentaciones/1-previate-esta/previate-mcdonald/qa/
 
 # Netflix The Hawk — originales crudos de las fotos (material fuente, ~47MB)
 assets/netflix-the-hawk/
