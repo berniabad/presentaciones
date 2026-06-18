@@ -69,6 +69,21 @@ body::before {
 .brand img { height: 18px; width: auto; opacity: .95; }
 .brand .sep { color: var(--t3); font-weight: 400; }
 .brand .ypf { color: var(--green); }
+.brand .brand-maxus { height: 22px; width: auto; opacity: .95; }
+.brand .brand-ypf { height: 20px; width: auto; opacity: .95; }
+.brand .brand-ypf-txt { color: var(--green); font-weight: 600; }
+
+/* lockup de logos (end-card / footer) */
+.logo-lockup { display: inline-flex; align-items: center; gap: 9px; vertical-align: middle; }
+.logo-lockup img { display: block; width: auto; }
+.logo-lockup .ll-maxus { height: 26px; }
+.logo-lockup .ll-ypf { height: 24px; }
+.logo-lockup .ll-x { color: var(--t3); }
+.logo-lockup .ll-ypf-txt { font-family: var(--font); font-weight: 700; color: var(--green); }
+
+.footer-inner .f-maxus { height: 18px; opacity: .85; }
+.footer-inner .f-ypf { height: 16px; opacity: .8; }
+.footer-inner .f-ypf-txt { color: var(--green); }
 .nav-links { display: flex; gap: 26px; }
 .nav-links a { font-size: 13px; color: var(--t2); transition: color .25s var(--ease); }
 .nav-links a:hover { color: var(--green); }
