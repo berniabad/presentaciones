@@ -604,12 +604,14 @@ select {
 }
 
 .steps-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 28px;
 }
 
 .lead-panel {
   display: grid;
   gap: 18px;
+  margin-top: 8px;
 }
 
 .data-grid {
