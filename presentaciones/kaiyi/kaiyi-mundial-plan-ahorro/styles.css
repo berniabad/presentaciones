@@ -367,6 +367,27 @@ a { color: inherit; text-decoration: none; }
 .cost-card.hot .cc-v { color: var(--red); }
 .cost-card .cc-d { font-size: 12.5px; color: var(--t-2); margin-top: 10px; line-height: 1.5; }
 
+/* ----- Paid media · channel block + portals table ----- */
+.pm-block { border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 28px 30px; background: var(--card); }
+.pm-block .pm-h { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+.pm-block .pm-h h3 { font-size: 20px; font-weight: 700; }
+.pm-block .pm-h .pm-pill { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: #fff; background: var(--red); padding: 4px 10px; border-radius: 999px; }
+.pm-block .pm-rational { font-size: 13.5px; color: var(--t-2); line-height: 1.6; margin-top: 12px; max-width: 720px; }
+.pm-block .stats { margin-top: 22px; }
+
+.ptable-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--card); }
+.ptable { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 580px; }
+.ptable th { text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--t-3); padding: 14px 16px; border-bottom: 1px solid var(--border-2); white-space: nowrap; }
+.ptable th:not(:first-child) { text-align: right; }
+.ptable td { padding: 13px 16px; border-top: 1px solid var(--border); color: var(--t-2); }
+.ptable td:first-child { color: #fff; font-weight: 600; padding-left: 20px; }
+.ptable td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+.ptable tbody tr:hover td { background: rgba(255,255,255,.02); }
+.ptable tr.total td { font-weight: 800; color: #fff; border-top: 1px solid var(--border-2); background: rgba(255,0,0,.06); }
+.ptable tr.total td:not(:first-child) { color: var(--red); }
+.pm-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 980px) { .pm-cols { grid-template-columns: 1fr; } }
+
 /* ----- Horizontal timeline (calendar) ----- */
 .tline { position: relative; margin-top: 14px; }
 .tline-rail { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
