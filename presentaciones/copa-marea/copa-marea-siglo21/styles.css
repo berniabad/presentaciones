@@ -1101,7 +1101,7 @@ html[lang="en"] .s21-nav-logo { display: none; }
 .pkg-col li::before { content:""; position:absolute; left:0; top:7px; width:7px; height:7px; border-radius:2px; background:var(--grad); }
 .pkg-col b { color:var(--acid); font-size:18px; line-height:1; }
 .pkg-list strong { color:var(--acid); font-weight:800; }
-.pkg-price small { display:block; margin-top:4px; color:var(--t-3); font-size:13px; font-family:var(--font-body); font-weight:500; }
+.pkg-price small { display:block; margin-top:4px; color:var(--t-3); font-size:13px; font-family:var(--font); font-weight:500; }
 .s21-closing-funnel { margin-top:0; padding:0; background:transparent; overflow:visible; }
 .s21-closing-funnel::before { display:none; }
 .s21-closing-funnel .s21-lockup { padding-top:0; }
@@ -1180,7 +1180,7 @@ html[lang="en"] .s21-nav-logo { display: none; }
 .activation-media::before,.activation-media::after { display:none; }
 .activation-media span { position:absolute; left:12px; top:12px; z-index:2; padding:6px 8px; border:1px solid rgba(255,255,255,.14); border-radius:999px; background:rgba(8,7,11,.54); backdrop-filter:blur(10px); font-size:9px; font-weight:700; letter-spacing:.14em; color:var(--t-3); }
 .activation-media i { position:absolute; right:14px; bottom:14px; z-index:2; min-width:42px; padding:8px 10px; border:1px solid rgba(188,255,69,.28); border-radius:999px; background:rgba(8,7,11,.56); backdrop-filter:blur(10px); font-style:normal; font-size:12px; font-weight:700; color:var(--lavanda); text-align:center; line-height:1; }
-.activation-media.vertical i,.activation-media.social i,.activation-media.living i,.activation-media.jersey i,.activation-media.team i{font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:.04em}
+.activation-media.vertical i,.activation-media.social i,.activation-media.living i,.activation-media.jersey i,.activation-media.team i{font-family:var(--font);font-size:12px;font-weight:700;letter-spacing:.04em}
 .s21-activation .act-role { margin:0 12px 16px; }
 .s21-activation h3 { margin:24px 12px 10px; font-size:19px; text-transform:uppercase; }.s21-activation .act-role + .act-letter + h3{margin-top:18px}.s21-activation>p{margin-inline:12px;color:var(--t-2);font-size:14px;line-height:1.6}
 .s21-activation blockquote { margin-top:24px; padding-top:20px; border-top:1px solid var(--border-green); font-size:22px; font-weight:700; line-height:1.15; }.s21-activation blockquote em{font-family:var(--font-display);font-weight:200;color:var(--lavanda)}
