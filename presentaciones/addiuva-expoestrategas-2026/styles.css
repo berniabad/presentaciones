@@ -693,10 +693,6 @@ select {
   object-fit: cover;
 }
 
-.av-cards {
-  align-items: stretch;
-}
-
 .stand-copy {
   display: grid;
   gap: 18px;
