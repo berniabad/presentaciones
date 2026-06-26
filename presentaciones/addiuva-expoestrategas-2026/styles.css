@@ -675,6 +675,14 @@ select {
   color: var(--text);
 }
 
+.data-grid-icons span svg {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  color: var(--gloaming);
+  flex: none;
+}
+
 .stand-copy {
   display: grid;
   gap: 18px;
