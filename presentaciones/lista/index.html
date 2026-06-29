@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentaciones · Gloaming</title>
+<meta name="description" content="Índice interno de las presentaciones online de Gloaming, agrupadas por marca o producto.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --green: #3FE465; --bg: #0a0a0a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: #fff; line-height: 1.5;
+    font-family: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; }
+  .wrap { max-width: 1024px; margin: 0 auto; padding: 64px 24px; }
+  @media (min-width: 768px) { .wrap { padding: 96px 24px; } }
+
+  header.head { margin-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 40px; }
+  .kicker { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 14px; font-weight: 500; letter-spacing: .2em; color: var(--green); }
+  .kicker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; }
+  h1 { font-size: 36px; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+  h1 .muted { color: rgba(255,255,255,.4); }
+  @media (min-width: 768px) { h1 { font-size: 60px; } }
+  .sub { margin-top: 20px; max-width: 36rem; font-size: 16px; color: rgba(255,255,255,.55); }
+  @media (min-width: 768px) { .sub { font-size: 18px; } }
+
+  .groups { display: flex; flex-direction: column; gap: 56px; }
+  .group-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+  .group-head h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; }
+  @media (min-width: 768px) { .group-head h2 { font-size: 30px; } }
+  .group-head .note { font-size: 14px; color: rgba(255,255,255,.4); }
+  .group-head .count { margin-left: auto; font-size: 14px; color: rgba(255,255,255,.3); font-variant-numeric: tabular-nums; }
+
+  .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+
+  .card { display: flex; align-items: center; gap: 16px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.02); border-radius: 12px; padding: 12px 16px; transition: border-color .3s, background .3s; }
+  .card:hover { border-color: rgba(63,228,101,.6); background: rgba(255,255,255,.04); }
+  .chip { display: flex; height: 44px; width: 44px; flex: none; align-items: center; justify-content: center; border-radius: 12px; font-size: 14px; font-weight: 700; letter-spacing: -0.02em; color: #fff; overflow: hidden; }
+  .chip.logo { border: 1px solid rgba(0,0,0,.05); background: #fff; }
+  .chip.logo.dark { border: 1px solid rgba(255,255,255,.1); background: #121212; }
+  .chip.logo img { height: 32px; width: 32px; object-fit: contain; }
+  .card .body { min-width: 0; flex: 1; }
+  .card .name { font-size: 16px; font-weight: 600; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .tag { margin-top: 2px; font-size: 14px; color: rgba(255,255,255,.45); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .arrow { flex: none; color: rgba(255,255,255,.25); transition: transform .3s, color .3s; }
+  .card:hover .arrow { transform: translateX(4px); color: var(--green); }
+
+  footer.foot { margin-top: 80px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 32px; font-size: 14px; color: rgba(255,255,255,.35); }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <div class="kicker"><span class="dot"></span> GLOAMING · PRESENTACIONES</div>
+      <h1>Todo lo publicado,<br><span class="muted">en un solo lugar.</span></h1>
+      <p class="sub">Índice interno de las <span id="total">0</span> presentaciones online, agrupadas por marca o producto.</p>
+    </header>
+    <div class="groups" id="groups"></div>
+    <footer class="foot">Gloaming · uso interno</footer>
+  </main>
+
+  <script>
+  // ============================================================
+  //  LISTA DE PRESENTACIONES · kits.gloaming.agency/lista
+  //  Para sumar un deck: 1) crear carpeta /<slug>/ con su index.html
+  //                      2) agregar una línea al grupo correspondiente acá abajo.
+  //  El "slug" es el nombre exacto de la carpeta. El link es /<slug>/.
+  //  Chip: usar { logo: 'logos/archivo.png' } (+ dark:true si el logo es claro)
+  //        o { mono: 'XX', tint: 'linear-gradient(...)' } si no hay logo.
+  // ============================================================
+  const L = 'logos';
+  const GROUPS = [
+    { label: 'Previate Esta', note: 'La red social de la previa', items: [
+      { slug: 'previate-esta-quilmes', name: 'Quilmes', tag: 'Mundial 2026', logo: L+'/previate-esta-quilmes.png', dark: true },
+      { slug: 'previate-frizze-mundial', name: 'Frizze', tag: 'Mundial 2026', mono: 'Fz', tint: 'linear-gradient(135deg,#ff4d8d,#a01b6b)' },
+      { slug: 'previate-mostaza-2026', name: 'Mostaza', tag: 'Propuesta 2026', mono: 'Mz', tint: 'linear-gradient(135deg,#ffb01f,#e02314)' },
+      { slug: 'previate-pepsi-mango-beat', name: 'Pepsi Black Mango Beat', tag: 'Propuesta', logo: L+'/previate-pepsi-mango-beat.png' },
+      { slug: 'previate-lays', name: "Lay's", tag: 'Mundial 2026', logo: L+'/previate-lays.png' },
+      { slug: 'previate-mcdonald', name: "McDonald's", tag: 'Propuesta 2026', logo: L+'/previate-mcdonald.png' },
+      { slug: 'previate-burger-king', name: 'Burger King', tag: 'Armá la Burger 2026', logo: L+'/previate-burger-king.png' },
+      { slug: 'heineken-previate-esta-2026', name: 'Heineken', tag: 'Propuesta 2026', logo: L+'/heineken-previate-esta-2026.png' },
+      { slug: 'brahma-previate-esta-2026', name: 'Brahma', tag: 'Propuesta Comercial 2026', logo: L+'/brahma-previate-esta-2026.png' },
+      { slug: 'speed-previate-esta-2026', name: 'Speed Unlimited', tag: 'Propuesta Comercial 2026', logo: L+'/speed-previate-esta-2026.png', dark: true },
+      { slug: 'previate-mundial-2026', name: 'Mundial 2026', tag: 'Propuesta para marcas', logo: L+'/previate-mundial-2026.png', dark: true },
+      { slug: 'manaos-previate-esta', name: 'Manaos', tag: 'Orgullo Argentino 2026', mono: 'Mn', tint: 'linear-gradient(135deg,#ff8732,#d62300)' },
+    ]},
+    { label: 'Kaiyi', note: 'GEP × Kaiyi', items: [
+      { slug: 'kaiyi-argentina', name: 'Kaiyi Argentina', tag: '2026', logo: L+'/kaiyi-argentina.png', dark: true },
+      { slug: 'kaiyi-mundial', name: 'Kaiyi × World Cup', tag: '2026', logo: L+'/kaiyi-mundial.png', dark: true },
+      { slug: 'kaiyi-mundial-plan-ahorro', name: 'Kaiyi × Mundial · Plan de Ahorro', tag: 'Contrapropuesta HQ · EN/ES', mono: 'PA', tint: 'linear-gradient(135deg,#ff3b3b,#cc0000)' },
+    ]},
+    { label: 'Maxus', items: [
+      { slug: 'maxus-snow', name: 'Maxus Snow', tag: '2026', logo: L+'/maxus-snow.png', dark: true },
+      { slug: 'maxus-vp-aeropuertos', name: 'Vía Pública Aeropuertos', tag: 'Invierno 2026', logo: L+'/maxus-vp-aeropuertos.png', dark: true },
+      { slug: 'maxus-ypf-boxes', name: 'YPF Boxes', tag: 'Service oficial · ideas de guion', mono: 'YB', tint: 'linear-gradient(135deg,#3FE465,#1b7a36)' },
+      { slug: 'maxus-ypf-boxes-redes', name: 'YPF Boxes · Redes', tag: 'Carruseles + historia · aprobación', mono: 'YB', tint: 'linear-gradient(135deg,#1b7a36,#3FE465)' },
+    ]},
+    { label: 'Copa Marea', note: 'Fútbol · cultura · comunidad', items: [
+      { slug: 'copa-marea', name: 'Propuesta para marcas', tag: 'ES / EN', mono: 'CM', tint: 'linear-gradient(135deg,#7c5cff,#34d399)' },
+      { slug: 'copa-marea-siglo21', name: 'Copa Marea × Siglo 21', tag: 'Propuesta · Universidad Siglo 21', mono: 'S21', tint: 'linear-gradient(135deg,#0a4cff,#00b3ff)' },
+    ]},
+    { label: 'Un Tiro al Arco', note: 'AdMonkey · contenido futbolero', items: [
+      { slug: 'utaa-mundial-2026', name: 'Modo Mundial 2026', tag: 'Propuesta genérica', mono: 'TA', tint: 'linear-gradient(135deg,#00d4ff,#5e5ce6)' },
+      { slug: 'utaa-mostaza', name: 'Un Tiro al Arco × Mostaza', tag: 'Mediakit · La Cuarta', mono: 'Mz', tint: 'linear-gradient(135deg,#ffd60a,#ff3b30)' },
+    ]},
+    { label: 'Podcast Financiero', note: 'Roxom', items: [
+      { slug: 'roxom-tv-podcast', name: 'Roxom TV Podcast', logo: L+'/roxom-tv-podcast.png', dark: true },
+    ]},
+    { label: 'Netflix', note: 'The Hawk', items: [
+      { slug: 'netflix-the-hawk', name: 'The Hawk', tag: 'Propuesta social-first', logo: L+'/netflix-the-hawk.png' },
+    ]},
+    { label: 'Roblox', note: 'Gaming · immersive brand experiences', items: [
+      { slug: 'roblox-activations', name: 'Roblox Activations', tag: 'Propuesta · ES/EN', mono: 'RB', tint: 'linear-gradient(135deg,#e2231a,#7a0f0a)' },
+    ]},
+    { label: 'Otras', items: [
+      { slug: 'addiuva-expoestrategas-2026', name: 'Addiuva', tag: 'Expoestrategas 2026', mono: 'Ad', tint: 'linear-gradient(135deg,#b14bff,#6a2bd6)' },
+    ]},
+  ];
+
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  function chip(d) {
+    if (d.mono) return '<span class="chip" style="background-image:' + d.tint + '">' + esc(d.mono) + '</span>';
+    return '<span class="chip logo' + (d.dark ? ' dark' : '') + '"><img src="' + d.logo + '" alt="' + esc(d.name) + '" loading="lazy" decoding="async"></span>';
+  }
+  function card(d) {
+    return '<a class="card" href="/' + d.slug + '/" target="_blank" rel="noopener noreferrer">' +
+      chip(d) +
+      '<span class="body"><span class="name">' + esc(d.name) + '</span>' +
+      (d.tag ? '<span class="tag">' + esc(d.tag) + '</span>' : '') + '</span>' +
+      '<span class="arrow">&rarr;</span></a>';
+  }
+  let total = 0;
+  document.getElementById('groups').innerHTML = GROUPS.map((g) => {
+    total += g.items.length;
+    return '<section><div class="group-head"><h2>' + esc(g.label) + '</h2>' +
+      (g.note ? '<span class="note">' + esc(g.note) + '</span>' : '') +
+      '<span class="count">' + g.items.length + '</span></div>' +
+      '<div class="grid">' + g.items.map(card).join('') + '</div></section>';
+  }).join('');
+  document.getElementById('total').textContent = total;
+  </script>
+</body>
+</html>

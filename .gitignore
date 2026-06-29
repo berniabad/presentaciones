@@ -12,7 +12,10 @@ assets/copa-marea/*.pdf
 presentaciones/_viejas/belada-padel-presentacion/assets/extracted-pdf/
 
 # McDonald's — screenshots de QA (artefactos de dev, ~30MB)
-presentaciones/previate-esta/previate-mcdonald/qa/
+presentaciones/previate-mcdonald/qa/
+
+# Reporte Kaiyi evento — pendiente de revisión, NO publicar todavía (se sirve estático si se commitea)
+presentaciones/reporte-kaiyi-evento/
 
 # Netflix The Hawk — originales crudos de las fotos (material fuente, ~47MB)
 assets/netflix-the-hawk/
