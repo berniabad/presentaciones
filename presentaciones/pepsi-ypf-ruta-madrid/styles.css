@@ -1,7 +1,7 @@
 
   :root{
-    --black:#05070f;--black2:#0a0e1c;
-    --blue:#1428a0;--eblue:#2c6bff;--eblue-soft:#7aa0ff;
+    --black:#04050c;--black2:#080c18;
+    --blue:#0e2196;--eblue:#1f3cf5;--eblue-soft:#80a2ff;
     --red:#eb1933;--gold:#ffcf4d;--white:#fff;
     --muted:rgba(255,255,255,.62);--muted2:rgba(255,255,255,.42);
     --line:rgba(255,255,255,.12);--card:rgba(255,255,255,.035);--maxw:1100px;
@@ -18,9 +18,9 @@
   section{position:relative;padding-top:120px;padding-bottom:120px}
   @media(max-width:680px){section{padding-top:76px;padding-bottom:76px}}
   .bgfx{position:fixed;inset:0;z-index:-2;background:
-    radial-gradient(900px 600px at 12% -5%,rgba(44,107,255,.20),transparent 60%),
-    radial-gradient(820px 560px at 100% 8%,rgba(235,25,51,.13),transparent 55%),
-    radial-gradient(1000px 700px at 50% 120%,rgba(20,40,160,.28),transparent 60%),var(--black)}
+    radial-gradient(900px 600px at 12% -5%,rgba(31,60,245,.26),transparent 60%),
+    radial-gradient(820px 560px at 100% 8%,rgba(235,25,51,.14),transparent 55%),
+    radial-gradient(1000px 700px at 50% 120%,rgba(14,33,150,.32),transparent 60%),var(--black)}
   .grain{position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
     background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:3px 3px}
 
@@ -41,8 +41,12 @@
 
   /* hero */
   .hero{min-height:94vh;display:flex;flex-direction:column;justify-content:center;padding-top:64px;position:relative;overflow:hidden}
+  .hero .wrap{width:100%}
   .hero .hbg{position:absolute;inset:0;z-index:-1;background:var(--black2) center/cover no-repeat;
-    background-image:linear-gradient(180deg,rgba(5,7,15,.62),rgba(5,7,15,.88) 70%,var(--black)),var(--hero-img,none)}
+    background-image:
+      linear-gradient(90deg,rgba(4,5,12,.72) 0%,rgba(4,5,12,.5) 45%,rgba(4,5,12,.28) 100%),
+      linear-gradient(180deg,rgba(4,5,12,.3),rgba(4,5,12,.62) 85%,var(--black)),
+      var(--hero-img,none)}
   .badge{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;padding:8px 16px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.05);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--eblue-soft)}
   .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--eblue);box-shadow:0 0 12px var(--eblue)}
   .hero h1{font-size:clamp(54px,12vw,160px);font-weight:900;margin:24px 0 0;text-transform:uppercase}
@@ -55,14 +59,12 @@
   .scrollcue .ln{width:46px;height:1px;background:var(--muted2);position:relative;overflow:hidden}
   .scrollcue .ln::after{content:"";position:absolute;left:-46px;top:0;width:46px;height:1px;background:var(--eblue);animation:slide 2.2s infinite}
   @keyframes slide{to{left:46px}}
-  .pulse{position:absolute;right:-4%;bottom:8%;width:52%;max-width:680px;opacity:.4;z-index:-1;pointer-events:none}
-  @media(max-width:880px){.pulse{opacity:.18;width:130%;right:-30%}}
 
   /* blocks */
   .kicker{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--eblue-soft);margin-bottom:18px}
   .kicker .bar{width:26px;height:2px;background:var(--eblue);border-radius:2px}
   .kicker.red{color:#ff6177}.kicker.red .bar{background:var(--red)}
-  .kicker.gold{color:var(--gold)}.kicker.gold .bar{background:var(--gold)}
+  .kicker.gold{color:#ff6177}.kicker.gold .bar{background:var(--red)}
   h2.title{font-size:clamp(30px,5.2vw,56px);font-weight:800;max-width:19ch}
   .lead{font-size:clamp(16px,1.9vw,20px);color:var(--muted);max-width:64ch;margin-top:20px}
   .section-head{margin-bottom:58px}
@@ -83,8 +85,8 @@
   .ico{width:24px;height:24px;display:block}
   .ic{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,var(--eblue),var(--blue));margin-bottom:18px;color:#fff}
   .card.red .ic{background:linear-gradient(140deg,var(--red),#8d0f1f)}
-  .card.gold .ic{background:linear-gradient(140deg,var(--gold),#c98a00);color:#241a00}
-  .card.gold:hover{border-color:rgba(255,207,77,.5);background:rgba(255,207,77,.06)}
+  .card.gold .ic{background:linear-gradient(140deg,var(--red),#8d0f1f);color:#fff}
+  .card.gold:hover{border-color:rgba(235,25,51,.5);background:rgba(235,25,51,.06)}
   .num-badge{font-family:'Poppins';font-weight:800;font-size:13px;color:var(--eblue-soft);letter-spacing:.1em;margin-bottom:12px;display:block}
 
   /* shift */
@@ -180,7 +182,7 @@
   .www ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:4px}
   .www li{display:flex;gap:11px;font-size:14.5px;color:rgba(255,255,255,.82)}
   .www li .mk{flex:none;color:var(--eblue);font-weight:800}
-  .www .card.red li .mk{color:#ff6177}.www .card.gold li .mk{color:var(--gold)}
+  .www .card.red li .mk{color:#ff6177}.www .card.gold li .mk{color:#ff6177}
   .www .ic{font-family:'Poppins';font-weight:800;font-size:15px;width:auto;padding:0 16px}
 
   /* timeline */
@@ -240,11 +242,11 @@
   .prize .pbody{padding:14px 16px 16px}
   .pname{font-family:'Poppins';font-weight:700;font-size:15px;line-height:1.15}
   .pdesc{font-size:12.5px;color:var(--muted);margin-top:4px}
-  .grand{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,207,77,.4);min-height:320px;display:flex;align-items:flex-end}
+  .grand{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(235,25,51,.4);min-height:320px;display:flex;align-items:flex-end}
   .grand .gimg{position:absolute;inset:0;background:#0e1424 center/cover no-repeat;z-index:-2}
   .grand .gov{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(5,7,15,.96),rgba(5,7,15,.3))}
   .grand .gbody{padding:36px 34px}
-  .grand .glabel{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .grand .glabel{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ff6177;margin-bottom:8px}
   .grand h3{font-size:clamp(26px,4vw,42px);font-weight:900;text-transform:uppercase}
   .grand p{margin-top:10px;color:rgba(255,255,255,.84);font-size:15px;max-width:46ch}
   .grand .gchips{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
@@ -259,6 +261,16 @@
   .act h3{font-size:19px;font-weight:800;margin-bottom:10px}
   .act p{color:var(--muted);font-size:14.5px}
 
+  /* ---- activacion extra (incentivo interno) ---- */
+  .extra{margin-top:20px;display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start;border-radius:20px;padding:32px 30px;border:1px solid rgba(31,60,245,.42);background:linear-gradient(160deg,rgba(31,60,245,.15),rgba(14,33,150,.04))}
+  .extra-ic{width:56px;height:56px;border-radius:15px;display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,var(--eblue),var(--blue));color:#fff}
+  .extra-ic svg{width:26px;height:26px}
+  .extra-body h3{font-size:clamp(20px,3vw,26px);font-weight:800;margin:8px 0 10px}
+  .extra-body p{color:var(--muted);font-size:14.5px;max-width:72ch;margin-bottom:16px}
+  .extra-prize{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+  .ep-label{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#ff6177;margin-bottom:10px}
+  @media(max-width:680px){.extra{grid-template-columns:1fr;padding:26px 24px}.extra-ic{display:none}}
+
   /* ---- perfiles groups ---- */
   .pgroup{margin-top:44px}
   .pgroup.first{margin-top:26px}
@@ -266,3 +278,9 @@
   .pgroup-label h3{font-family:'Poppins';font-size:21px;font-weight:800}
   .pgroup-label .n{font-size:13px;color:var(--eblue-soft);font-weight:600}
   .opt-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--eblue-soft);margin-bottom:8px}
+
+  /* ---- host con foto ---- */
+  .pcard.host{display:flex;gap:20px;align-items:stretch}
+  .pcard.host .pface{flex:none;width:128px;align-self:stretch;min-height:210px;object-fit:cover;object-position:top center;border-radius:14px;border:1px solid var(--line);display:block}
+  .pcard.host .pinfo{flex:1;min-width:0}
+  @media(max-width:520px){.pcard.host{flex-direction:column}.pcard.host .pface{width:100%;height:240px;min-height:0}}
