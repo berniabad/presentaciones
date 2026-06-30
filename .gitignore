@@ -20,6 +20,9 @@ presentaciones/reporte-kaiyi-evento/
 # Netflix The Hawk — originales crudos de las fotos (material fuente, ~47MB)
 assets/netflix-the-hawk/
 
+# Pepsi x YPF — PPTs fuente (~224MB) y notas internas. Solo local, no versionar
+assets/pepsi-ypf/
+
 # OS / editor junk
 .DS_Store
 Thumbs.db
