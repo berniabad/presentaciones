@@ -65,6 +65,8 @@
       const label = NAV[lang][sec];
       if (label) a.textContent = label;
     });
+    const brandLink = document.querySelector('[data-brand-link]');
+    if (brandLink) brandLink.setAttribute('href', '#' + lang + '-para-marcas');
     const cta = document.querySelector('[data-cta]');
     if (cta) cta.textContent = NAV[lang].cta;
     langButtons.forEach((b) => b.classList.toggle('active', b.dataset.lang === lang));
