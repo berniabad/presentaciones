@@ -42,15 +42,15 @@
   .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
   @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
 
-  .card { display: flex; align-items: center; gap: 16px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.02); border-radius: 12px; padding: 12px 16px; transition: border-color .3s, background .3s; }
+  .card { display: flex; align-items: center; gap: 16px; min-width: 0; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.02); border-radius: 12px; padding: 12px 16px; transition: border-color .3s, background .3s; }
   .card:hover { border-color: rgba(63,228,101,.6); background: rgba(255,255,255,.04); }
   .chip { display: flex; height: 44px; width: 44px; flex: none; align-items: center; justify-content: center; border-radius: 12px; font-size: 14px; font-weight: 700; letter-spacing: -0.02em; color: #fff; overflow: hidden; }
   .chip.logo { border: 1px solid rgba(0,0,0,.05); background: #fff; }
   .chip.logo.dark { border: 1px solid rgba(255,255,255,.1); background: #121212; }
   .chip.logo img { height: 32px; width: 32px; object-fit: contain; }
   .card .body { min-width: 0; flex: 1; }
-  .card .name { font-size: 16px; font-weight: 600; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .card .tag { margin-top: 2px; font-size: 14px; color: rgba(255,255,255,.45); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .name { display: block; font-size: 16px; font-weight: 600; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .tag { display: block; margin-top: 2px; font-size: 14px; color: rgba(255,255,255,.45); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .card .arrow { flex: none; color: rgba(255,255,255,.25); transition: transform .3s, color .3s; }
   .card:hover .arrow { transform: translateX(4px); color: var(--green); }
 
