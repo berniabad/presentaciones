@@ -184,6 +184,8 @@
   .www li .mk{flex:none;color:var(--eblue);font-weight:800}
   .www .card.red li .mk{color:#ff6177}.www .card.gold li .mk{color:#ff6177}
   .www .ic{font-family:'Poppins';font-weight:800;font-size:15px;width:auto;padding:0 16px}
+  /* chip YPF con su azul de marca (#0451E4) */
+  .www .card.red .ic{background:linear-gradient(140deg,#0451e4,#0a2f8f)}
 
   /* timeline */
   .tl{position:relative;margin-top:20px;padding-left:4px}
@@ -201,7 +203,11 @@
 
   .note{font-size:13px;color:var(--muted2);border-left:2px solid var(--line);padding:4px 0 4px 16px;margin-top:26px;max-width:74ch;line-height:1.6}
 
-  .close{text-align:center;padding-top:140px;padding-bottom:110px}
+  .close{position:relative;overflow:hidden;text-align:center;padding-top:140px;padding-bottom:110px}
+  .close .cbg{position:absolute;inset:0;z-index:-1;background:#04050c center/cover no-repeat;
+    background-image:
+      linear-gradient(180deg,var(--black) 0%,rgba(4,5,12,.82) 30%,rgba(4,5,12,.88) 62%,var(--black) 100%),
+      url('assets/footer-ypf.jpg')}
   .close h2{font-size:clamp(40px,9vw,108px);font-weight:900;text-transform:uppercase}
   .close h2 .g{background:linear-gradient(100deg,var(--eblue),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
   .close .lockwrap{margin-top:34px;display:flex;justify-content:center}
@@ -232,8 +238,9 @@
   .prizes.c3{grid-template-columns:repeat(3,1fr)}
   .prizes.c4{grid-template-columns:repeat(4,1fr)}
   .prizes.c1{grid-template-columns:1fr;max-width:300px}
+  .prizes.c2{grid-template-columns:repeat(2,1fr);max-width:544px}
   @media(max-width:820px){.prizes.c3,.prizes.c4{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:480px){.prizes.c3,.prizes.c4{grid-template-columns:1fr}}
+  @media(max-width:480px){.prizes.c2,.prizes.c3,.prizes.c4{grid-template-columns:1fr}}
   .prize{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);transition:transform .3s,border-color .3s}
   .prize:hover{transform:translateY(-3px);border-color:rgba(44,107,255,.5)}
   .pslot{position:relative;aspect-ratio:4/3;background:#0e1424 center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--muted2)}
@@ -281,6 +288,6 @@
 
   /* ---- host con foto ---- */
   .pcard.host{display:flex;gap:20px;align-items:stretch}
-  .pcard.host .pface{flex:none;width:128px;align-self:stretch;min-height:210px;object-fit:cover;object-position:top center;border-radius:14px;border:1px solid var(--line);display:block}
+  .pcard.host .pface{flex:none;width:152px;align-self:stretch;min-height:210px;object-fit:cover;object-position:top center;border-radius:14px;border:1px solid var(--line);display:block}
   .pcard.host .pinfo{flex:1;min-width:0}
   @media(max-width:520px){.pcard.host{flex-direction:column}.pcard.host .pface{width:100%;height:240px;min-height:0}}
